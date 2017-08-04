@@ -21,20 +21,34 @@ export class MyApp {
 
   pages: PageInterface[] = [
     {
-      title: "Home",
-      pageName: "TabsPage",
+      title: "Inicio",
+      pageName: "NavegarPage",
       tabComponent: "HomePage",
       index: 0,
       icon: "home"
     },
     {
-      title: "About",
-      pageName: "AboutPage",
-      tabComponent: "AboutPage",
+      title: "Conferencias",
+      pageName: "NavegarPage",
+      tabComponent: "ConferencePage",
       index: 1,
-      icon: "contacts"
+      icon: "calendar"
     },
-    { title: "Login", pageName: "LoginPage", icon: "user" }
+    { title: "Temas", pageName: "TopicPage", icon: "school" },
+        {
+      title: "Ponentes",
+      pageName: "NavegarPage",
+      tabComponent: "speakerPage",
+      index: 2,
+      icon: "contacts"
+    },    {
+      title: "Nosotros",
+      pageName: "NavegarPage",
+      tabComponent: "AboutPage",
+      index: 3,
+      icon: "information-circle"
+    },
+    { title: "Iniciar Sesión", pageName: "LoginPage", icon: "user" }
   ];
 
   constructor(

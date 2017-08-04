@@ -23,6 +23,6 @@ export class StartPage {
   }
 
     welcome() {
-    this.navCtrl.setRoot('TabsPage');
+    this.navCtrl.setRoot('NavegarPage');
   }
 }

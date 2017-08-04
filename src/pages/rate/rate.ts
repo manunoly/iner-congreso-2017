@@ -1,25 +1,27 @@
-import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the RatePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { Component } from "@angular/core";
+import { ViewController } from "ionic-angular";
+import { DataProvider } from '../../providers/data';
 
 @IonicPage()
 @Component({
-  selector: 'page-rate',
-  templateUrl: 'rate.html',
+  selector: "page-rate",
+  templateUrl: "rate.html"
 })
 export class RatePage {
+  rate: number = 5;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public viewCtrl: ViewController, private dataS: DataProvider) {}
+
+  ionViewDidLoad() {}
+
+  close() {
+    this.viewCtrl.dismiss().catch(() => {});
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RatePage');
+  rateConference() {
+    this.dataS.rateConference(this.viewCtrl.data.conferenceID, this.rate);
+    this.viewCtrl.dismiss().catch(() => {});
   }
-
 }
+
